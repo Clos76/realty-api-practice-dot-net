@@ -1,0 +1,18 @@
+﻿# Visual Studio
+.vs/
+
+# Build folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+
+# Node (if you have frontend)
+node_modules/
+.next/
+
+# Environment variables
+.env
+.env.local
