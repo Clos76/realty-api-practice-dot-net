@@ -6,7 +6,7 @@
         //no id , no createdon ---server sets those. 
         public string Title { get; set; }=string .Empty;
         public string Description { get; set; } = string.Empty;
-        public decimal Price { get; set; }
+        public int Price { get; set; }
         public int Bedrooms { get; set; }
         public int Bathrooms { get; set; }
         public string Address { get; set; } = string.Empty;

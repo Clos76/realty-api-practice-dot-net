@@ -14,13 +14,26 @@ public class PropertyRepository : Repository<Property>, IPropertyRepository
             .ToListAsync();
 
     public async Task<List<Property>> GetActiveAsync()
-        => await _dbSet
-            .Include(p => p.PropertyType)
-            .Where(p => p.Active)
-            .ToListAsync();
+   => await _dbSet
+       .Include(p => p.PropertyType)
+       .Include(p => p.City)
+       .Include(p => p.LegalStatus)
+       .Include(p => p.ListingSource)
+       .Include(p => p.Images)
+       .Where(p => p.Active)
+       .ToListAsync();
 
     public async Task<List<Property>> GetByTypeAsync(int propertyTypeId)
         => await _dbSet
             .Where(p => p.PropertyTypeId == propertyTypeId && p.Active)
+        .Include(p => p.PropertyType)
+       .Include(p => p.City)
+       .Include(p => p.LegalStatus)
+       .Include(p => p.ListingSource)
+       .Include(p => p.Images)
+       .Where(p => p.Active)
             .ToListAsync();
+
+
+
 }
