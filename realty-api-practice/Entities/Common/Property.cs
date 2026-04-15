@@ -30,11 +30,19 @@
 
         public ListingSource ListingSource { get; set; } = null!;
 
+       
+
+
+
        ///many leads for one property
        public ICollection<Lead> Leads { get; set; } = new List<Lead>();
 
         //images
         public ICollection<PropertyImage> Images { get; set; } = new List<PropertyImage>();
+
+        public ICollection<PropertyView> PropertyViews { get; set; } = new List<PropertyView>();
+
+        public ICollection<PropertyAssignment> PropertyAssignments { get; set; } = new List<PropertyAssignment>();
 
 
     }

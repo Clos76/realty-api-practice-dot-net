@@ -26,10 +26,11 @@ namespace realty_api_practice.Entities.Constraints
 
             builder.Property(la => la.CreatedOn)
                 .IsRequired()
-                .HasDefaultValue("GETUTCDATE()");
+                .HasDefaultValueSql("GETUTCDATE()");
 
             builder.Property(la=> la.UpdatedOn)
-                .IsRequired();
+                .IsRequired()
+                 .HasDefaultValueSql("GETUTCDATE()");
 
 
             //many 

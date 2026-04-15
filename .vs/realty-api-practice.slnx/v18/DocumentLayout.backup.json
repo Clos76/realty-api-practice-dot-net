@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "C:\\aspnetcore\\realty-api-practice\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|c:\\aspnetcore\\realty-api-practice\\realty-api-practice\\entities\\constraints\\propertyimageconstraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|solutionrelative:realty-api-practice\\entities\\constraints\\propertyimageconstraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|c:\\aspnetcore\\realty-api-practice\\realty-api-practice\\repositories\\propertyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|solutionrelative:realty-api-practice\\repositories\\propertyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|c:\\aspnetcore\\realty-api-practice\\realty-api-practice\\entities\\constraints\\propertyconstraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|solutionrelative:realty-api-practice\\entities\\constraints\\propertyconstraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|c:\\aspnetcore\\realty-api-practice\\realty-api-practice\\entities\\constraints\\listingsourceconstraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|solutionrelative:realty-api-practice\\entities\\constraints\\listingsourceconstraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|c:\\aspnetcore\\realty-api-practice\\realty-api-practice\\entities\\common\\propertyimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|solutionrelative:realty-api-practice\\entities\\common\\propertyimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|c:\\aspnetcore\\realty-api-practice\\realty-api-practice\\entities\\common\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|solutionrelative:realty-api-practice\\entities\\common\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|c:\\aspnetcore\\realty-api-practice\\realty-api-practice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|solutionrelative:realty-api-practice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|c:\\aspnetcore\\realty-api-practice\\realty-api-practice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|solutionrelative:realty-api-practice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|c:\\aspnetcore\\realty-api-practice\\realty-api-practice\\repositories\\ipropertyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D825E61-CC0C-124D-C452-901A2DE16F6E}|realty-api-practice\\realty-api-practice.csproj|solutionrelative:realty-api-practice\\repositories\\ipropertyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,93 +22,28 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ListingSourceConstraint.cs",
-              "DocumentMoniker": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\Entities\\Constraints\\ListingSourceConstraint.cs",
-              "RelativeDocumentMoniker": "realty-api-practice\\Entities\\Constraints\\ListingSourceConstraint.cs",
-              "ToolTip": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\Entities\\Constraints\\ListingSourceConstraint.cs",
-              "RelativeToolTip": "realty-api-practice\\Entities\\Constraints\\ListingSourceConstraint.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "IPropertyRepository.cs",
+              "DocumentMoniker": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\Repositories\\IPropertyRepository.cs",
+              "RelativeDocumentMoniker": "realty-api-practice\\Repositories\\IPropertyRepository.cs",
+              "ToolTip": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\Repositories\\IPropertyRepository.cs",
+              "RelativeToolTip": "realty-api-practice\\Repositories\\IPropertyRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T04:42:41.434Z",
+              "WhenOpened": "2026-04-14T14:33:31.399Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PropertyImageConstraint.cs",
-              "DocumentMoniker": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\Entities\\Constraints\\PropertyImageConstraint.cs",
-              "RelativeDocumentMoniker": "realty-api-practice\\Entities\\Constraints\\PropertyImageConstraint.cs",
-              "ToolTip": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\Entities\\Constraints\\PropertyImageConstraint.cs",
-              "RelativeToolTip": "realty-api-practice\\Entities\\Constraints\\PropertyImageConstraint.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAwAAAAAAAAAA==",
+              "Title": "PropertyRepository.cs",
+              "DocumentMoniker": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\Repositories\\PropertyRepository.cs",
+              "RelativeDocumentMoniker": "realty-api-practice\\Repositories\\PropertyRepository.cs",
+              "ToolTip": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\Repositories\\PropertyRepository.cs",
+              "RelativeToolTip": "realty-api-practice\\Repositories\\PropertyRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T04:40:49.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PropertyImage.cs",
-              "DocumentMoniker": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\Entities\\Common\\PropertyImage.cs",
-              "RelativeDocumentMoniker": "realty-api-practice\\Entities\\Common\\PropertyImage.cs",
-              "ToolTip": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\Entities\\Common\\PropertyImage.cs",
-              "RelativeToolTip": "realty-api-practice\\Entities\\Common\\PropertyImage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T04:40:29.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Property.cs",
-              "DocumentMoniker": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\Entities\\Common\\Property.cs",
-              "RelativeDocumentMoniker": "realty-api-practice\\Entities\\Common\\Property.cs",
-              "ToolTip": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\Entities\\Common\\Property.cs",
-              "RelativeToolTip": "realty-api-practice\\Entities\\Common\\Property.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAowBYAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T04:38:45.462Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PropertyConstraint.cs",
-              "DocumentMoniker": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\Entities\\Constraints\\PropertyConstraint.cs",
-              "RelativeDocumentMoniker": "realty-api-practice\\Entities\\Constraints\\PropertyConstraint.cs",
-              "ToolTip": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\Entities\\Constraints\\PropertyConstraint.cs",
-              "RelativeToolTip": "realty-api-practice\\Entities\\Constraints\\PropertyConstraint.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T04:37:17.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\appsettings.json",
-              "RelativeDocumentMoniker": "realty-api-practice\\appsettings.json",
-              "ToolTip": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\appsettings.json",
-              "RelativeToolTip": "realty-api-practice\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-11T04:35:22.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\Program.cs",
-              "RelativeDocumentMoniker": "realty-api-practice\\Program.cs",
-              "ToolTip": "C:\\aspnetcore\\realty-api-practice\\realty-api-practice\\Program.cs",
-              "RelativeToolTip": "realty-api-practice\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T04:31:25.677Z",
+              "WhenOpened": "2026-04-14T14:17:23.512Z",
               "EditorCaption": ""
             },
             {

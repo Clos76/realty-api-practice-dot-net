@@ -35,5 +35,23 @@ namespace realty_api_practice.Entities.Data
         public DbSet<PropertyImage> PropertyImages => Set<PropertyImage>();
         public DbSet<PropertyType> PropertyTypes => Set<PropertyType>();
         public DbSet<State> States => Set<State>();
+
+        // leads
+        public DbSet<Lead> Leads => Set<Lead>();
+        public DbSet<LeadStatus> LeadStatuses => Set<LeadStatus>();
+        public DbSet<LeadSource> LeadSources => Set<LeadSource>();
+        public DbSet<Intent> Intents => Set<Intent>();
+        public DbSet<TimeFrame> TimeFrames => Set<TimeFrame>();
+        public DbSet<LeadAssignment> LeadAssignments => Set<LeadAssignment>();
+        public DbSet<User> Users => Set<User>();
+
+        //users
+        public DbSet<UserRole> UserRoles => Set<UserRole>();
+        public DbSet<Role> Roles => Set<Role>();
+        public DbSet<PropertyView> PropertyViews => Set<PropertyView>();
+        public DbSet<PropertyAssignment> PropertyAssignments => Set<PropertyAssignment>();
+
+
+
     }
 }

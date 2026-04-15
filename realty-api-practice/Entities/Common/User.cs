@@ -11,5 +11,9 @@
         public bool Active { get; set; }
 
         public ICollection<LeadAssignment> LeadAssignments { get; set; } = new List<LeadAssignment>();
+        public ICollection<UserRole> UserRoles { get;set;  } = new List<UserRole>();
+        public ICollection<PropertyAssignment> PropertyAssignments { get; set; } = new List<PropertyAssignment>();
+
+
     }
 }

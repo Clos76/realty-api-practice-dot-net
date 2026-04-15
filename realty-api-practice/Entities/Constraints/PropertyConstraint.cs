@@ -78,11 +78,6 @@ namespace realty_api_practice.Entities.Constraints
                 .HasForeignKey(p => p.ListingSourceId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder.HasOne(p => p.Leads)
-                .WithMany(l=> l.Properties)
-                .HasForeignKey(l=> l.PropertyId)
-                .OnDelete(DeleteBehavior.Restrict);
-
 
             //property images 1 To many
             builder.HasMany( p =>  p.Images)

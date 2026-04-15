@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using realty_api_practice.Entities.Data;
 
@@ -11,9 +12,11 @@ using realty_api_practice.Entities.Data;
 namespace realty_api_practice.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260413153225_CreatedLeadsTablesAndDependencies")]
+    partial class CreatedLeadsTablesAndDependencies
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -343,43 +346,6 @@ namespace realty_api_practice.Migrations
                     b.ToTable("Properties");
                 });
 
-            modelBuilder.Entity("realty_api_practice.Entities.Common.PropertyAssignment", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETUTCDATE()");
-
-                    b.Property<int>("PropertyId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdatedOn")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETUTCDATE()");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.HasIndex("PropertyId", "UserId")
-                        .IsUnique();
-
-                    b.ToTable("PropertyAssignments", (string)null);
-                });
-
             modelBuilder.Entity("realty_api_practice.Entities.Common.PropertyImage", b =>
                 {
                     b.Property<int>("Id")
@@ -437,68 +403,6 @@ namespace realty_api_practice.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PropertyType", (string)null);
-                });
-
-            modelBuilder.Entity("realty_api_practice.Entities.Common.PropertyView", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("IpAddress")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<int>("LeadId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PropertyId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("SessionId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("ViewedOn")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETUTCDATE()");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("LeadId");
-
-                    b.HasIndex("PropertyId");
-
-                    b.HasIndex("ViewedOn");
-
-                    b.ToTable("PropertyViews", (string)null);
-                });
-
-            modelBuilder.Entity("realty_api_practice.Entities.Common.Role", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<bool>("Active")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(true);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Role", (string)null);
                 });
 
             modelBuilder.Entity("realty_api_practice.Entities.Common.State", b =>
@@ -571,35 +475,6 @@ namespace realty_api_practice.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("realty_api_practice.Entities.Common.UserRole", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<bool>("Active")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RoleId");
-
-                    b.HasIndex("UserId", "RoleId")
-                        .IsUnique();
-
-                    b.ToTable("UserRoles", (string)null);
-                });
-
             modelBuilder.Entity("realty_api_practice.Entities.Common.City", b =>
                 {
                     b.HasOne("realty_api_practice.Entities.Common.State", "State")
@@ -613,18 +488,18 @@ namespace realty_api_practice.Migrations
 
             modelBuilder.Entity("realty_api_practice.Entities.Common.Lead", b =>
                 {
-                    b.HasOne("realty_api_practice.Entities.Common.Intent", "Intent")
+                    b.HasOne("realty_api_practice.Entities.Common.Intent", "Intents")
                         .WithMany("Leads")
                         .HasForeignKey("IntentId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("realty_api_practice.Entities.Common.LeadSource", "LeadSource")
+                    b.HasOne("realty_api_practice.Entities.Common.LeadSource", "LeadSources")
                         .WithMany("Leads")
                         .HasForeignKey("LeadSourceId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("realty_api_practice.Entities.Common.LeadStatus", "LeadStatus")
+                    b.HasOne("realty_api_practice.Entities.Common.LeadStatus", "LeadStatuses")
                         .WithMany("Leads")
                         .HasForeignKey("LeadStatusId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -636,20 +511,20 @@ namespace realty_api_practice.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("realty_api_practice.Entities.Common.TimeFrame", "TimeFrame")
+                    b.HasOne("realty_api_practice.Entities.Common.TimeFrame", "TimeFrames")
                         .WithMany("Leads")
                         .HasForeignKey("TimeFrameId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.Navigation("Intent");
+                    b.Navigation("Intents");
 
-                    b.Navigation("LeadSource");
+                    b.Navigation("LeadSources");
 
-                    b.Navigation("LeadStatus");
+                    b.Navigation("LeadStatuses");
 
                     b.Navigation("Properties");
 
-                    b.Navigation("TimeFrame");
+                    b.Navigation("TimeFrames");
                 });
 
             modelBuilder.Entity("realty_api_practice.Entities.Common.LeadAssignment", b =>
@@ -706,25 +581,6 @@ namespace realty_api_practice.Migrations
                     b.Navigation("PropertyType");
                 });
 
-            modelBuilder.Entity("realty_api_practice.Entities.Common.PropertyAssignment", b =>
-                {
-                    b.HasOne("realty_api_practice.Entities.Common.Property", "Property")
-                        .WithMany("PropertyAssignments")
-                        .HasForeignKey("PropertyId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("realty_api_practice.Entities.Common.User", "User")
-                        .WithMany("PropertyAssignments")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Property");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("realty_api_practice.Entities.Common.PropertyImage", b =>
                 {
                     b.HasOne("realty_api_practice.Entities.Common.Property", "Property")
@@ -734,44 +590,6 @@ namespace realty_api_practice.Migrations
                         .IsRequired();
 
                     b.Navigation("Property");
-                });
-
-            modelBuilder.Entity("realty_api_practice.Entities.Common.PropertyView", b =>
-                {
-                    b.HasOne("realty_api_practice.Entities.Common.Lead", "Lead")
-                        .WithMany("PropertyViews")
-                        .HasForeignKey("LeadId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("realty_api_practice.Entities.Common.Property", "Property")
-                        .WithMany("PropertyViews")
-                        .HasForeignKey("PropertyId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Lead");
-
-                    b.Navigation("Property");
-                });
-
-            modelBuilder.Entity("realty_api_practice.Entities.Common.UserRole", b =>
-                {
-                    b.HasOne("realty_api_practice.Entities.Common.Role", "Role")
-                        .WithMany("UserRoles")
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("realty_api_practice.Entities.Common.User", "User")
-                        .WithMany("UserRoles")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Role");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("realty_api_practice.Entities.Common.City", b =>
@@ -787,8 +605,6 @@ namespace realty_api_practice.Migrations
             modelBuilder.Entity("realty_api_practice.Entities.Common.Lead", b =>
                 {
                     b.Navigation("LeadAssignments");
-
-                    b.Navigation("PropertyViews");
                 });
 
             modelBuilder.Entity("realty_api_practice.Entities.Common.LeadSource", b =>
@@ -816,20 +632,11 @@ namespace realty_api_practice.Migrations
                     b.Navigation("Images");
 
                     b.Navigation("Leads");
-
-                    b.Navigation("PropertyAssignments");
-
-                    b.Navigation("PropertyViews");
                 });
 
             modelBuilder.Entity("realty_api_practice.Entities.Common.PropertyType", b =>
                 {
                     b.Navigation("Properties");
-                });
-
-            modelBuilder.Entity("realty_api_practice.Entities.Common.Role", b =>
-                {
-                    b.Navigation("UserRoles");
                 });
 
             modelBuilder.Entity("realty_api_practice.Entities.Common.State", b =>
@@ -845,10 +652,6 @@ namespace realty_api_practice.Migrations
             modelBuilder.Entity("realty_api_practice.Entities.Common.User", b =>
                 {
                     b.Navigation("LeadAssignments");
-
-                    b.Navigation("PropertyAssignments");
-
-                    b.Navigation("UserRoles");
                 });
 #pragma warning restore 612, 618
         }

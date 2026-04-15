@@ -21,7 +21,7 @@
 
         //nav
 
-        public Property Property { get; set; } = null!;
+        public Property Properties { get; set; } = null!;
 
         public LeadStatus LeadStatus { get; set; } = null!;
         public LeadSource LeadSource { get; set; } = null!;
@@ -34,6 +34,7 @@
 
         //many side
         public ICollection <LeadAssignment> LeadAssignments { get; set; } = new List<LeadAssignment>();
+        public ICollection<PropertyView> PropertyViews { get; set; } = new List<PropertyView>();
 
     }
 }

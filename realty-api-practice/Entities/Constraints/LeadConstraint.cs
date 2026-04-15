@@ -52,7 +52,7 @@ namespace realty_api_practice.Entities.Constraints
 
 
             //relationship
-            builder.HasOne(l=> l.Property)
+            builder.HasOne(l=> l.Properties)
                 .WithMany(p=> p.Leads)
                 .HasForeignKey(l=>l.PropertyId)
                 .OnDelete(DeleteBehavior.Restrict);
