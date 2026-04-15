@@ -1,17 +1,24 @@
 using Microsoft.EntityFrameworkCore;
 using realty_api_practice.Entities.Data;
+using realty_api_practice.Repositories;
+using realty_api_practice.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
-// 🔥 THIS is what you were missing
+// ✅ Database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-var app = builder.Build();
+// ✅ Repositories — must be here, BEFORE builder.Build()
+builder.Services.AddScoped<IPropertyRepository, PropertyRepository>();
+
+// ✅ Services — must be here, BEFORE builder.Build()
+builder.Services.AddScoped<IPropertyService, PropertyService>();
+
+var app = builder.Build(); // ← everything above this, nothing below
 
 if (app.Environment.IsDevelopment())
 {
